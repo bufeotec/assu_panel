@@ -39,7 +39,7 @@
                     <label for="remember" class="text-gray-500 dark:text-gray-300">Recuérdame</label>
                 </div>
             </div>
-            <a href="" class="text-sm font-medium text-assu hover:underline dark:text-white">¿Olvidaste tu contraseña?</a>
+            <a href="{{route('password.request')}}" class="text-sm font-medium text-assu hover:underline dark:text-white">¿Olvidaste tu contraseña?</a>
         </div>
 
         @if (session()->has('error'))

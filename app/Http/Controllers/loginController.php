@@ -44,5 +44,24 @@ class loginController extends Controller
             return redirect()->route('login')->with('error', 'Ocurrió un error al intentar mostrar el contenido.');
         }
     }
+    public function  forgotPassword(){
+        try{
+
+            return view('auth.forgot-password');
+        }catch (\Exception $e){
+            $this->logs->insertarLog($e);
+            return redirect()->route('login')->with('error', 'Ocurrió un error al intentar mostrar el contenido.');
+        }
+    }
+    public function resetPassword(){
+        try{
+
+            return view('auth.reset-password');
+        }catch (\Exception $e){
+            $this->logs->insertarLog($e);
+            return redirect()->route('login')->with('error', 'Ocurrió un error al intentar mostrar el contenido.');
+        }
+    }
+
 
 }
